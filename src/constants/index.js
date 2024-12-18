@@ -19,10 +19,13 @@ import {
   starbucks,
   tesla,
   shopify,
+  farhan,
   carrent,
   jobit,
   tripguide,
   threejs,
+  bilal,
+  dk,
 } from "../assets";
 
 export const navLinks = [
@@ -31,8 +34,16 @@ export const navLinks = [
     title: "About",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "skills",
+    title: "Skills",
+  },
+  {
+    id: "animation",
+    title: "Animations",
+  },
+  {
+    id: "works",
+    title: "Works",
   },
   {
     id: "contact",
@@ -43,19 +54,19 @@ export const navLinks = [
 const services = [
   {
     title: "Web Developer",
-    icon: web,
+    icon: backend,
   },
   {
     title: "React Native Developer",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
-    icon: backend,
+    title: "Frontend Developer",
+    icon: creator,
   },
   {
-    title: "Content Creator",
-    icon: creator,
+    title: "3D Animation",
+    icon: web,
   },
 ];
 
@@ -116,55 +127,43 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Bilal Ahmed",
+    company_name: "3D Web Chahiye?",
+    icon: bilal,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Frontend:- HTML, CSS, Bootstrap, Javascript, JQuerry.",
+      "Backend:- Node.js, Express.js, php.",
+      "Databases:-  MySql, PL/SQL.",
+      "Frameworks:- React.js, Next.js, Three.js, framer-motion, tailwind.",
+      "Other:- C, C++, Python.",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    title: "Dhanraj Kadam",
+    company_name: " Aaajao",
+    icon: dk,
+    iconBg: "#916DB3",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Frontend:- HTML, CSS, Bootstrap, Javascript, JQuerry.",
+      "Backend:- Node.js, php",
+      "Databases:-  MySql, PL/SQL.",
+      "Frameworks:- React.js, Next.js, Three.js, framer-motion.",
+      "Languages:- C, C++,  Python.",
     ],
   },
+
   {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
+    title: "Farhan Sultan",
+    company_name: "Dikhadunga",
+    icon: farhan,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Frontend:- HTML, CSS, Bootstrap, Javascript, JQuerry, EJS.",
+      "Backend:- Node.js, Express.js, php, postman",
+      "Databases:-  MongoDB, MySql, NoSql.",
+      "Frameworks:- React.js, Next.js, Three.js, Framer-motion, react-spring, tailwind.",
+      "Languages:- C, C++, Python, Kotlin.",
     ],
   },
 ];
@@ -172,27 +171,21 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
+      "I thought it was impossible to make a website as beautiful as our product, but Brogrammers proved me wrong.",
+    name: "Mariyam",
     image: "https://randomuser.me/api/portraits/women/4.jpg",
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
+      "I've never met web developers who truly cares about their clients' success like Brogrammer does.",
     name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
     image: "https://randomuser.me/api/portraits/men/5.jpg",
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+      "After Brogrammers optimized our website, our traffic increased by 50%. We can't thank them enough!",
+    name: "Anna",
+    image: "https://randomuser.me/api/portraits/women/95.jpg",
   },
 ];
 
