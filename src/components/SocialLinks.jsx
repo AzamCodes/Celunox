@@ -7,25 +7,25 @@ import { FiMail } from "react-icons/fi";
 const socialLinks = [
   {
     id: 1,
-    href: "https://github.com/your-username",
+    href: "https://github.com/azamcodes",
     icon: <FaGithub />,
     label: "GitHub",
   },
   {
     id: 2,
-    href: "https://linkedin.com/in/your-username",
+    href: "https://www.linkedin.com/company/celunox",
     icon: <FaLinkedin />,
     label: "LinkedIn",
   },
   {
     id: 3,
-    href: "https://twitter.com/your-username",
+    href: "https://twitter.com/celunox",
     icon: <FaTwitter />,
     label: "Twitter",
   },
   {
     id: 4,
-    href: "mailto:your-email@example.com",
+    href: "mailto:celunoxco@example.com",
     icon: <FiMail />,
     label: "Email",
   },

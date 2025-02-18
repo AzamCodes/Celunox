@@ -183,7 +183,7 @@ const testimonials = [
   },
   {
     testimonial:
-      "After Brogrammers optimized our website, our traffic increased by 50%. We can't thank them enough!",
+      "After Celunox optimized our website, our traffic increased by 50%. We can't thank them enough!",
     name: "Anna",
     image: "https://randomuser.me/api/portraits/women/95.jpg",
   },

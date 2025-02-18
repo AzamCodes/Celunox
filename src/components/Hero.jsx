@@ -23,7 +23,7 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <div className={`absolute top-[100px] right-24 max-w-4xl h-[230px] `}>
+      <div className={`absolute top-[100px] hidden sm:block right-24 max-w-4xl h-[230px] `}>
         <ComputersCanvas />
       </div>
 
