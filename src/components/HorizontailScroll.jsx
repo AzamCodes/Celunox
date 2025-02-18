@@ -52,8 +52,8 @@ const ProjectCard = ({
           </div>
         </div>
         <div className="mt-5 flex-grow">
-          <h3 className="text-white font-bold text-[22px] leading-tight overflow-hidden text-ellipsis display-webkit-box webkit-line-clamp-4 webkit-box-orient-vertical">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px] leading-relaxed overflow-hidden text-ellipsis display-webkit-box webkit-line-clamp-4 webkit-box-orient-vertical">
+          <h3 className="text-white font-bold text-[22px] leading-tight overflow-hidden text-ellipsis display-webkit-box webkit-line-clamp-2 webkit-box-orient-vertical">{name}</h3>
+          <p className="mt-2 text-secondary text-[14px] leading-relaxed overflow-hidden text-ellipsis display-webkit-box webkit-line-clamp-2 webkit-box-orient-vertical">
             {description}
           </p>
         </div>
@@ -84,29 +84,46 @@ const HorizontalScroll = () => {
     {
       name: "WebfolioX - Interactive Portfolio Website",
       description: "WebfolioX is an interactive portfolio website crafted with Next.js 13 and Framer Motion. It features a modern design, smooth animations, and showcases professional projects, case studies, and testimonials. The platform emphasizes responsive design, clean layouts, and seamless navigation, making it ideal for creative professionals to display their work and connect with clients.",
-      tags: [{ name: "React", color: "text-blue-500" }],
-      image: "webfoliox.png", // Just the image name, no need for full path
+      tags: [
+        { name: "Next.js", color: "text-gray-300" },
+        { name: "React", color: "text-blue-500" },
+        { name: "Framer Motion", color: "text-purple-500" }
+      ],
+      image: "webfoliox.png",
       source_code_link: "https://github.com/azamcodes/webfoliox",
     },
     {
       name: "PrimeAttire - Modern SaaS E-Commerce Platform",
+      tags: [
+        { name: "SaaS", color: "text-green-500" },
+        { name: "Next.js", color: "text-gray-300" },
+        { name: "E-commerce", color: "text-pink-500" }
+      ],
       description: "PrimeAttire is a scalable SaaS-based e-commerce platform featuring a dynamic customer-facing storefront and a feature-rich admin dashboard (AdminDesk). Designed for user-friendliness, business scalability, and seamless management, PrimeAttire empowers businesses to create multiple stores and manage products, categories, and promotional billboards. Customers enjoy a hassle-free shopping experience, while store owners benefit from intuitive management tools. Built with modern technologies, PrimeAttire delivers responsive design, real-time synchronization, and efficient state handling for a next-gen e-commerce experience.",
-      tags: [{ name: "JavaScript", color: "text-yellow-500" }],
-      image: "primeattire.png", // Update with your ImageKit path
-      source_code_link: "https://github.com/",
+      image: "primeattire.png",
+      source_code_link: "https://github.com/AzamCodes/ecommerce-store",
     },
     {
       name: "DevBlog - Next.js Blogging Platform",
       description: "DevBlog is a modern blogging platform built with Next.js, Tailwind CSS, and ShadCN UI. It allows users to create, manage, and share their blogs with ease. With a focus on performance and user experience, DevBlog offers an intuitive interface, responsive design, and various advanced features for both users and admins, including user authentication and SEO optimization.",
-      tags: [{ name: "JavaScript", color: "text-yellow-500" }],
-      image: "devbloghub.png", // Update with your ImageKit path
+      tags: [
+        { name: "Next.js", color: "text-gray-300" },
+        { name: "Tailwind", color: "text-cyan-500" },
+        { name: "ShadcnUI", color: "text-indigo-500" }
+      ],
+      image: "devbloghub.png",
       source_code_link: "https://github.com/azamcodes/devbloghub",
     },
     {
       name: "Portfolio",
       description: "Porfolio website for Azam Shaikh made with Next Js,Acternity UI,Tailwind CSS,Framer Motion.",
-      tags: [{ name: "JavaScript", color: "text-yellow-500" }],
-      image: "portfolio.png", // Update with your ImageKit path
+      tags: [
+        { name: "Next.js", color: "text-gray-300" },
+        { name: "Tailwind", color: "text-cyan-500" },
+        { name: "Framer Motion", color: "text-purple-500" },
+        { name: "Acternity UI", color: "text-orange-500" }
+      ],
+      image: "portfolio.png",
       source_code_link: "https://github.com/AzamCodes/Portfolio",
     },
   ];
@@ -127,7 +144,7 @@ const HorizontalScroll = () => {
       </div>
 
       {/* Visible on mobile only, regular vertical layout */}
-      <div className="sm:hidden px-4 py-8 flex flex-col gap-6">
+      <div className="sm:hidden px-4 py-8 flex flex-col gap-6 w-full">
         {projects.map((project, index) => (
           <ProjectCard key={index} index={index} {...project} />
         ))}
