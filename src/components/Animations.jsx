@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Tilt } from "react-tilt";
-import { motion, useViewportScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 

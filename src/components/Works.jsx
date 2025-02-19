@@ -7,6 +7,7 @@ import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import Image from "./Image";
 
 const ProjectCard = ({
   index,
@@ -27,8 +28,8 @@ const ProjectCard = ({
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
       >
         <div className="relative w-full h-[230px]">
-          <img
-            src={image}
+          <Image
+            src={"hspacks.png"}
             alt="project_image"
             className="w-full h-full object-cover rounded-2xl"
           />

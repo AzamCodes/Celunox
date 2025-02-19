@@ -1,31 +1,32 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { FiMail } from "react-icons/fi";
 
 const socialLinks = [
   {
     id: 1,
-    href: "https://github.com/your-username",
+    href: "https://github.com/azamcodes",
     icon: <FaGithub />,
     label: "GitHub",
   },
   {
     id: 2,
-    href: "https://linkedin.com/in/your-username",
+    href: "https://www.linkedin.com/company/celunox",
     icon: <FaLinkedin />,
     label: "LinkedIn",
   },
   {
     id: 3,
-    href: "https://twitter.com/your-username",
-    icon: <FaTwitter />,
+    href: "https://twitter.com/celunox",
+    icon: <FaXTwitter />,
     label: "Twitter",
   },
   {
     id: 4,
-    href: "mailto:your-email@example.com",
+    href: "mailto:celunoxco@gmail.com",
     icon: <FiMail />,
     label: "Email",
   },

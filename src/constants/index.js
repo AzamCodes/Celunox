@@ -30,23 +30,23 @@ import {
 
 export const navLinks = [
   {
-    id: "about",
+    id: "#about",
     title: "About",
   },
   {
-    id: "skills",
+    id: "#skills",
     title: "Skills",
   },
   {
-    id: "animation",
-    title: "Animations",
+    id: `/halal-business`,
+    title: "Halal Business",
   },
   {
-    id: "works",
+    id: "#works",
     title: "Works",
   },
   {
-    id: "contact",
+    id: "#contact",
     title: "Contact",
   },
 ];
@@ -72,56 +72,20 @@ const services = [
 
 const technologies = [
   {
-    name: "HTML 5",
-    icon: html,
+    name: "Product Management",
+    icon: "product-icon-path",
   },
   {
-    name: "CSS 3",
-    icon: css,
+    name: "E-commerce",
+    icon: "ecommerce-icon-path",
   },
   {
-    name: "JavaScript",
-    icon: javascript,
+    name: "Inventory Management",
+    icon: "inventory-icon-path",
   },
   {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
+    name: "Customer Relationship Management",
+    icon: "crm-icon-path",
   },
 ];
 
@@ -171,41 +135,63 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
+      "I attribute our success building and scaling our startup to this site. It's how we recruit new people, manage payments and track and meet deadlines.",
+    name: "John Doe",
+    image: "glinthub.jpg",
+    color: "#bbd0ff",
+    nameColor: "rgba(13, 27, 42, 1)",
+    designationColor: "rgba(13, 27, 42, 0.65)",
+    testimonialColor: "rgba(13, 27, 42, 0.85)",
+    designation: "CEO & Founder",
+  },
+  {
+    testimonial:
       "I thought it was impossible to make a website as beautiful as our product, but Brogrammers proved me wrong.",
     name: "Mariyam",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    image: "glinthub.jpg",
+    color: "#C77DFF",
+    nameColor: "rgba(37, 36, 34, 1)",
+    designationColor: "rgba(37, 36, 34, 0.65)",
+    testimonialColor: "#10002B",
+    designation: "Product Manager",
   },
   {
     testimonial:
-      "I've never met web developers who truly cares about their clients' success like Brogrammer does.",
+      "I've never met web developers who truly care about their clients' success like Brogrammer does.",
     name: "Chris Brown",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    image: "glinthub.jpg",
+    color: "#E0E1DD",
+    nameColor: "#2b2b2b",
+    designationColor: "#666666",
+    testimonialColor: "#0D1B2A",
+    designation: "CTO",
   },
   {
     testimonial:
-      "After Brogrammers optimized our website, our traffic increased by 50%. We can't thank them enough!",
+      "After Celunox optimized our website, our traffic increased by 50%. We can't thank them enough!",
     name: "Anna",
-    image: "https://randomuser.me/api/portraits/women/95.jpg",
+    image: "glinthub.jpg",
+    color: "#606C38",
+    nameColor: "rgba(254, 250, 224, 0.85)",
+    designationColor: "rgba(254, 250, 224, 0.65)",
+    testimonialColor: "rgba(254, 250, 224, 1)",
+    designation: "CTO",
   },
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "HSP",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "HINDUSTAN SECURE PACK is a remarkable name in the FIBC industry worldwide.",
     tags: [
       {
-        name: "react",
-        color: "blue-text-gradient",
+        name: "FIBC",
+        color: "orange-text-gradient",
       },
       {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
+        name: "packaging",
+        color: "yellow-text-gradient",
       },
     ],
     image: carrent,
@@ -217,16 +203,12 @@ const projects = [
       "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
     tags: [
       {
-        name: "react",
-        color: "blue-text-gradient",
+        name: "job search",
+        color: "purple-text-gradient",
       },
       {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
+        name: "employment",
+        color: "red-text-gradient",
       },
     ],
     image: jobit,
@@ -238,16 +220,12 @@ const projects = [
       "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
     tags: [
       {
-        name: "nextjs",
-        color: "blue-text-gradient",
+        name: "travel",
+        color: "teal-text-gradient",
       },
       {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
+        name: "booking",
+        color: "cyan-text-gradient",
       },
     ],
     image: tripguide,

@@ -265,3 +265,77 @@ img.image {
   grid-template-rows: 1fr;
   grid-gap: 6rem;
 }
+.cardContainer {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 500px;
+  width: 1000px;
+  border-radius: 25px;
+  padding: 50px;
+  transform-origin: top;
+}
+
+.card h2 {
+  text-align: center;
+  margin: 0px;
+  font-size: 28px;
+}
+
+.body {
+  display: flex;
+  height: 100%;
+  margin-top: 0px;
+  gap: 50px;
+}
+
+.description {
+  width: 40%;
+  position: relative;
+  top: 10%;
+}
+
+.nameDesignation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 1.5em;
+}
+
+.name {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.designation {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.imageContainer {
+  position: relative;
+  width: 60%;
+  height: 100%;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.imageContainer .inner {
+  width: 100%;
+  height: 100%;
+}
+
+.imageContainer img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
