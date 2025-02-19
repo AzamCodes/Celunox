@@ -1,9 +1,8 @@
-
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import App from "./App";
-import HalalBusiness from "./components/HalalBusiness";
+import App from "./App.jsx";
+import HalalBusiness from "./components/HalalBusiness.jsx";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(

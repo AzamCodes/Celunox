@@ -1,4 +1,3 @@
-
 import { BrowserRouter } from "react-router-dom";
 import {
   About,
@@ -26,7 +25,7 @@ const App = () => {
         <Navbar />
         <Hero />
       </div>
-      <HorizontalScroll/>
+      <HorizontalScroll />
       <About />
       {/* <Experience /> */}
       <Tech />
