@@ -5,7 +5,11 @@ import { styles } from "../styles";
 
 const TipCard = ({ index, title, description, image, isReversed }) => {
   const tipLabel = index === 3 ? "Bonus Tip" : `Tip ${index + 1}`;
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 982f3be9f052ba6f8bb0a82dc09fb0cb7cc77b0c
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -74,12 +78,21 @@ const HalalBusiness = () => {
 
   return (
     <section className="relative w-full min-h-screen mx-auto">
+<<<<<<< HEAD
       <div className={`${styles.padding} max-w-7xl mx-auto relative z-0 mt-12`}>
         <div>
           <p className={styles.sectionSubText}>Guide to Success</p>
           <h2 className={styles.sectionHeadText}>
             How to Build a Successful Halal Business
           </h2>
+=======
+      <div
+        className={`${styles.padding} max-w-7xl mx-auto relative z-0 mt-12`}
+      >
+        <div>
+          <p className={styles.sectionSubText}>Guide to Success</p>
+          <h2 className={styles.sectionHeadText}>How to Build a Successful Halal Business</h2>
+>>>>>>> 982f3be9f052ba6f8bb0a82dc09fb0cb7cc77b0c
         </div>
 
         <div className="sm:mt-20 mt-12 flex flex-col gap-12">
@@ -97,4 +110,8 @@ const HalalBusiness = () => {
   );
 };
 
+<<<<<<< HEAD
 export default HalalBusiness;
+=======
+export default HalalBusiness; 
+>>>>>>> 982f3be9f052ba6f8bb0a82dc09fb0cb7cc77b0c
