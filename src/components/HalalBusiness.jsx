@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "./Image";
 import { styles } from "../styles";
-import SectionWrapper from "../hoc/SectionWrapper";
 
 const TipCard = ({ index, title, description, image, isReversed }) => {
   const tipLabel = index === 3 ? "Bonus Tip" : `Tip ${index + 1}`;
@@ -74,27 +73,25 @@ const HalalBusiness = () => {
   ];
 
   return (
-    <SectionWrapper idName="halal-business">
-      <div className={`${styles.padding} max-w-7xl mx-auto relative z-0 mt-12`}>
-        <div>
-          <p className={styles.sectionSubText}>Guide to Success</p>
-          <h2 className={styles.sectionHeadText}>
-            How to Build a Successful Halal Business
-          </h2>
-        </div>
-
-        <div className="sm:mt-20 mt-12 flex flex-col gap-12">
-          {tips.map((tip, index) => (
-            <TipCard
-              key={`tip-${index}`}
-              index={index}
-              {...tip}
-              isReversed={index % 2 === 1}
-            />
-          ))}
-        </div>
+    <div className={`${styles.padding} max-w-7xl mx-auto relative z-0 mt-12`}>
+      <div>
+        <p className={styles.sectionSubText}>Guide to Success</p>
+        <h2 className={styles.sectionHeadText}>
+          How to Build a Successful Halal Business
+        </h2>
       </div>
-    </SectionWrapper>
+
+      <div className="sm:mt-20 mt-12 flex flex-col gap-12">
+        {tips.map((tip, index) => (
+          <TipCard
+            key={`tip-${index}`}
+            index={index}
+            {...tip}
+            isReversed={index % 2 === 1}
+          />
+        ))}
+      </div>
+    </div>
   );
 };
 

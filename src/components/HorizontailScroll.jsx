@@ -97,7 +97,7 @@ const HorizontalScroll = () => {
       </div>
 
       {/* Visible on mobile only, regular vertical layout */}
-      <div className="sm:hidden px-14 py-8 flex flex-col gap-8 md:gap-6 w-full">
+      <div className="sm:hidden  px-6 py-8 flex flex-col gap-8  w-full">
         {projects.map((project, index) => (
           <ProjectCard key={index} index={index} {...project} />
         ))}

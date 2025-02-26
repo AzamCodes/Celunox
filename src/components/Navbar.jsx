@@ -81,7 +81,17 @@ const Navbar = () => {
               } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
-              <a href={`${nav.id}`}>{nav.title}</a>
+              {nav.id === "halal-business" ? (
+                <Link to="/halal-business">{nav.title}</Link>
+              ) : nav.id === "contact" ? (
+                <a href="#contact" onClick={() => setToggle(false)}>
+                  {nav.title}
+                </a>
+              ) : (
+                <a href={`#${nav.id}`} onClick={() => setToggle(false)}>
+                  {nav.title}
+                </a>
+              )}
             </li>
           ))}
         </ul>

@@ -30,23 +30,19 @@ import {
 
 export const navLinks = [
   {
-    id: "#about",
+    id: "about",
     title: "About",
   },
   {
-    id: "#skills",
-    title: "Skills",
-  },
-  {
-    id: `/halal-business`,
+    id: "halal-business",
     title: "Halal Business",
   },
   {
-    id: "#works",
+    id: "works",
     title: "Works",
   },
   {
-    id: "#contact",
+    id: "contact",
     title: "Contact",
   },
 ];

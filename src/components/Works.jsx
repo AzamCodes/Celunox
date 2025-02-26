@@ -79,12 +79,12 @@ const ProjectCard = ({
 const Works = () => {
   return (
     <div>
-      <motion.div className="px-14 py-8 " variants={textVariant()}>
+      <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText}`}>Our work</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
       </motion.div>
 
-      <div className="w-full flex px-14 py-8">
+      <div className="w-full flex ">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
@@ -97,7 +97,7 @@ const Works = () => {
         </motion.p>
       </div>
 
-      <div className="px-14 py-8 grid grid-cols-1 place-content-center md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 w-full justify-center">
+      <div className="grid grid-cols-1 place-content-center mt-6 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 w-full justify-center">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
@@ -106,4 +106,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, "work");
+export default SectionWrapper(Works, "works");
