@@ -83,10 +83,6 @@ const Navbar = () => {
             >
               {nav.id === "halal-business" ? (
                 <Link to="/halal-business">{nav.title}</Link>
-              ) : nav.id === "contact" ? (
-                <a href="#contact" onClick={() => setToggle(false)}>
-                  {nav.title}
-                </a>
               ) : (
                 <a href={`#${nav.id}`} onClick={() => setToggle(false)}>
                   {nav.title}
@@ -128,11 +124,17 @@ const Navbar = () => {
                           : "text-secondary/80"
                       } hover:text-white transition-colors`}
                       onClick={() => {
-                        setToggle(!toggle);
+                        setToggle(false);
                         setActive(nav.title);
                       }}
                     >
-                      <a href={`${nav.id}`}>{nav.title}</a>
+                      {nav.id === "halal-business" ? (
+                        <Link to="/halal-business">{nav.title}</Link>
+                      ) : (
+                        <a href={`#${nav.id}`} onClick={() => setToggle(false)}>
+                          {nav.title}
+                        </a>
+                      )}
                     </motion.li>
                   ))}
                 </motion.ul>
