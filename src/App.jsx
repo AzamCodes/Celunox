@@ -28,7 +28,7 @@ const App = () => {
       <HorizontalScroll />
       <About />
       {/* <Experience /> */}
-      <Tech />
+      {/* <Tech /> */}
       {/* <Animations /> */}
       <Works />
       <HalalBusiness />

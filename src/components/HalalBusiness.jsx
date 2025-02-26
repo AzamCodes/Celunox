@@ -2,16 +2,21 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "./Image";
 import { styles } from "../styles";
+import SectionWrapper from "../hoc/SectionWrapper";
 
 const TipCard = ({ index, title, description, image, isReversed }) => {
   const tipLabel = index === 3 ? "Bonus Tip" : `Tip ${index + 1}`;
-  
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.2 }}
-      className={`flex flex-col ${isReversed ? "md:flex-row-reverse" : "md:flex-row"} gap-8 w-full min-h-[400px] ${index % 2 === 0 ? "bg-tertiary" : "bg-black-200"} rounded-2xl sm:p-8 p-5`}
+      className={`flex flex-col ${
+        isReversed ? "md:flex-row-reverse" : "md:flex-row"
+      } gap-8 w-full min-h-[400px] ${
+        index % 2 === 0 ? "bg-tertiary" : "bg-black-200"
+      } rounded-2xl sm:p-8 p-5`}
     >
       {/* Image Section */}
       <div className="flex-1">
@@ -69,11 +74,13 @@ const HalalBusiness = () => {
   ];
 
   return (
-    <section className="relative w-full min-h-screen mx-auto">
+    <SectionWrapper idName="halal-business">
       <div className={`${styles.padding} max-w-7xl mx-auto relative z-0 mt-12`}>
         <div>
           <p className={styles.sectionSubText}>Guide to Success</p>
-          <h2 className={styles.sectionHeadText}>How to Build a Successful Halal Business</h2>
+          <h2 className={styles.sectionHeadText}>
+            How to Build a Successful Halal Business
+          </h2>
         </div>
 
         <div className="sm:mt-20 mt-12 flex flex-col gap-12">
@@ -87,7 +94,7 @@ const HalalBusiness = () => {
           ))}
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 };
 

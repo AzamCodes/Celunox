@@ -196,10 +196,10 @@ const testimonials = [
       "I've never met web developers who truly care about their clients' success like Brogrammer does.",
     name: "Chris Brown",
     image: "glinthub.jpg",
-    color: "#E0E1DD",
-    nameColor: "#2b2b2b",
-    designationColor: "#666666",
-    testimonialColor: "#0D1B2A",
+    color: "rgba(58, 12, 163, 1)",
+    nameColor: "rgba(241, 250, 238, 1)",
+    designationColor: "rgba(241, 250, 238, 0.75)",
+    testimonialColor: "rgba(241, 250, 238, 0.85)",
     designation: "CTO",
   },
   {
@@ -217,6 +217,50 @@ const testimonials = [
 
 const projects = [
   {
+    name: "WebfolioX - Interactive Portfolio Website",
+    description:
+      "WebfolioX is an interactive portfolio website crafted with Next.js 13 and Framer Motion. It features a modern design, smooth animations, and showcases professional projects, case studies, and testimonials. The platform emphasizes responsive design, clean layouts, and seamless navigation, making it ideal for creative professionals to display their work and connect with clients.",
+    tags: [
+      { name: "portfolio", color: "text-blue-500" },
+      { name: "interactive", color: "text-gray-300" },
+    ],
+    image: "webfoliox.png",
+    source_code_link: "https://github.com/azamcodes/webfoliox",
+  },
+  {
+    name: "PrimeAttire - Modern SaaS E-Commerce Platform",
+    tags: [
+      { name: "e-commerce", color: "text-pink-500" },
+      { name: "SaaS", color: "text-green-500" },
+    ],
+    description:
+      "PrimeAttire is a scalable SaaS-based e-commerce platform featuring a dynamic customer-facing storefront and a feature-rich admin dashboard (AdminDesk). Designed for user-friendliness, business scalability, and seamless management, PrimeAttire empowers businesses to create multiple stores and manage products, categories, and promotional billboards. Customers enjoy a hassle-free shopping experience, while store owners benefit from intuitive management tools. Built with modern technologies, PrimeAttire delivers responsive design, real-time synchronization, and efficient state handling for a next-gen e-commerce experience.",
+    image: "primeattire.png",
+    source_code_link: "https://github.com/AzamCodes/ecommerce-store",
+  },
+  {
+    name: "DevBlog - Next.js Blogging Platform",
+    description:
+      "DevBlog is a modern blogging platform built with Next.js, Tailwind CSS, and ShadCN UI. It allows users to create, manage, and share their blogs with ease. With a focus on performance and user experience, DevBlog offers an intuitive interface, responsive design, and various advanced features for both users and admins, including user authentication and SEO optimization.",
+    tags: [
+      { name: "blogging", color: "text-indigo-500" },
+      { name: "SEO", color: "text-gray-300" },
+    ],
+    image: "devbloghub.png",
+    source_code_link: "https://github.com/azamcodes/devbloghub",
+  },
+  {
+    name: "Portfolio",
+    description:
+      "Portfolio website for Azam Shaikh made with Next Js, Acternity UI, Tailwind CSS, Framer Motion.",
+    tags: [
+      { name: "portfolio", color: "text-orange-500" },
+      { name: "showcase", color: "text-cyan-500" },
+    ],
+    image: "portfolio.png",
+    source_code_link: "https://github.com/AzamCodes/Portfolio",
+  },
+  {
     name: "HSP",
     description:
       "HINDUSTAN SECURE PACK is a remarkable name in the FIBC industry worldwide.",
@@ -230,41 +274,7 @@ const projects = [
         color: "yellow-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
-      {
-        name: "job search",
-        color: "purple-text-gradient",
-      },
-      {
-        name: "employment",
-        color: "red-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "travel",
-        color: "teal-text-gradient",
-      },
-      {
-        name: "booking",
-        color: "cyan-text-gradient",
-      },
-    ],
-    image: tripguide,
+    image: "hspacks.png",
     source_code_link: "https://github.com/",
   },
 ];
