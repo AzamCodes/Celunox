@@ -23,11 +23,11 @@ const Card = ({
 
   return (
     <div
-      className="h-[85vh] md:h-[120vh] flex items-center justify-center sticky top-0"
+      className="h-[85vh] md:h-[120vh] flex flex-col w-full items-center justify-center sticky top-0"
       ref={container}
     >
       <motion.div
-        className="flex flex-col md:flex-row items-center gap-3  md:gap-6 relative h-fit md:max-h-[800px] w-full md:max-w-[800px] rounded-[25px] p-[8px] md:p-[25px] transform-origin-top"
+        className="flex flex-col items-center justify-center gap-3  md:gap-6 relative h-[200px]  md:h-[250px] w-full md:max-w-[450px] rounded-[25px] p-[8px] md:p-[25px] transform-origin-top"
         style={{
           backgroundColor: color,
           scale,
@@ -44,10 +44,12 @@ const Card = ({
 
         <div className="w-full flex flex-col  justify-center items-center  relative top-[10%] mt-4 md:mt-[20px]">
           <div className="relative">
-            <FaQuoteRight className="text-gray-100 text-lg md:text-3xl opacity-75 absolute -top-7 right-1 " />
+            <span className="absolute right-3 -top-12  md:-top-12 md:right-0 ">
+              <FaQuoteRight className="text-gray-100 text-3xl md:text-3xl opacity-75" />
+            </span>
             <h2
               style={{ color: testimonialColor }}
-              className="text-center m-0 text-[18px] md:text-[22px] lg:text-[24px] "
+              className="text-center m-0 text-[20px] md:text-[22px] lg:text-[24px] "
             >
               "{testimonial}"
             </h2>
@@ -60,12 +62,12 @@ const Card = ({
             >
               {name}
             </p>
-            <p
+            {/* <p
               style={{ color: designationColor }}
               className="font-medium text-[16px] md:text-[18px]"
             >
               {designation}
-            </p>
+            </p> */}
           </div>
         </div>
       </motion.div>

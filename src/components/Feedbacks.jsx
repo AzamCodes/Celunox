@@ -55,7 +55,7 @@ const Feedbacks = () => {
       className={`mt-12 bg-black-100 rounded-[20px]`}
     >
       <div
-        className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[250px]`}
+        className={`bg-tertiary rounded-2xl sm:px-16 px-3 sm:py-16 py-10 min-h-[250px]`}
       >
         <motion.div variants={textVariant(0.1)} initial="hidden" animate="show">
           <p className={styles.sectionSubText}>What others say</p>
@@ -63,7 +63,7 @@ const Feedbacks = () => {
         </motion.div>
       </div>
       <div
-        className={`-mt-20 pb-14 ${styles.paddingX} justify-center flex flex-wrap gap-7`}
+        className={`-mt-20 pb-14 px-1 sm:px-16  justify-center flex flex-wrap gap-7`}
       >
         {testimonials.map((testimonial, i) => {
           const targetScale = 1 - (testimonials.length - i) * 0.05;

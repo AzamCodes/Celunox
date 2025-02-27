@@ -166,9 +166,8 @@ const experiences = [
 
 const testimonials = [
   {
-    testimonial:
-      "I attribute our success building and scaling our startup to this site. It's how we recruit new people, manage payments and track and meet deadlines.",
-    name: "John Doe",
+    testimonial: "satisfied with the work, they deliver quality.",
+    name: "Anas",
     image: "glinthub.jpg",
     color: "#bbd0ff",
     nameColor: "rgba(13, 27, 42, 1)",
@@ -177,9 +176,8 @@ const testimonials = [
     designation: "CEO & Founder",
   },
   {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Brogrammers proved me wrong.",
-    name: "Mariyam",
+    testimonial: "Prompt and quick, great coordination.",
+    name: "Saara Patel",
     image: "glinthub.jpg",
     color: "#C77DFF",
     nameColor: "rgba(37, 36, 34, 1)",
@@ -188,25 +186,13 @@ const testimonials = [
     designation: "Product Manager",
   },
   {
-    testimonial:
-      "I've never met web developers who truly care about their clients' success like Brogrammer does.",
-    name: "Chris Brown",
+    testimonial: "Great service, great product.",
+    name: "Zain",
     image: "glinthub.jpg",
     color: "rgba(58, 12, 163, 1)",
     nameColor: "rgba(241, 250, 238, 1)",
     designationColor: "rgba(241, 250, 238, 0.75)",
     testimonialColor: "rgba(241, 250, 238, 0.85)",
-    designation: "CTO",
-  },
-  {
-    testimonial:
-      "After Celunox optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Anna",
-    image: "glinthub.jpg",
-    color: "#606C38",
-    nameColor: "rgba(254, 250, 224, 0.85)",
-    designationColor: "rgba(254, 250, 224, 0.65)",
-    testimonialColor: "rgba(254, 250, 224, 1)",
     designation: "CTO",
   },
 ];
