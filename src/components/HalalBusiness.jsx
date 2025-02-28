@@ -2,6 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "./Image";
 import { styles } from "../styles";
+import SocialLinks from "./SocialLinks";
+import Footer from "./Footer";
+import { Link, useLocation } from "react-router-dom";
+import Navbar from "./Navbar";
 
 const TipCard = ({ index, title, description, image, isReversed }) => {
   const tipLabel = index === 3 ? "Bonus Tip" : `Tip ${index + 1}`;
@@ -45,6 +49,8 @@ const TipCard = ({ index, title, description, image, isReversed }) => {
 };
 
 const HalalBusiness = () => {
+  const location = useLocation();
+
   const tips = [
     {
       title: "Your Brand Must Stand Out",
@@ -73,7 +79,10 @@ const HalalBusiness = () => {
   ];
 
   return (
-    <div className={`${styles.padding} max-w-7xl mx-auto relative z-0 mt-12`}>
+    <div
+      className={`sm:px-16 px-6 max-w-7xl mx-auto relative z-0 pt-12 md:pt-24 `}
+    >
+      {/* <Navbar /> */}
       <div>
         <p className={styles.sectionSubText}>Guide to Success</p>
         <h2 className={styles.sectionHeadText}>
@@ -82,6 +91,7 @@ const HalalBusiness = () => {
       </div>
 
       <div className="sm:mt-20 mt-12 flex flex-col gap-12">
+        <SocialLinks />
         {tips.map((tip, index) => (
           <TipCard
             key={`tip-${index}`}
@@ -91,6 +101,7 @@ const HalalBusiness = () => {
           />
         ))}
       </div>
+      {/* <Footer /> */}
     </div>
   );
 };

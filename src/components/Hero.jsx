@@ -14,7 +14,7 @@ const Hero = () => {
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
         </div> */}
 
-      <div className="flex relative justify-center items-center mt-4 h-full">
+      <div className="flex relative justify-center items-center  h-full">
         <div className="flex justify-center items-center h-full">
           <h1 className="text-5xl text-center text-white">
             Get Started With <span className="text-[#915EFF]">Your</span>{" "}

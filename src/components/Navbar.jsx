@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { styles } from "../styles";
@@ -11,6 +11,7 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,16 +24,18 @@ const Navbar = () => {
   }, []);
 
   const menuVariants = {
-    initial: { scaleY: 0, opacity: 0, transformOrigin: "top" },
+    initial: { scaleY: 0, opacity: 0, transformOrigin: "top", y: -20 },
     animate: {
       scaleY: 1,
       opacity: 1,
+      y: 0,
       transition: { duration: 0.3, ease: [0.12, 0, 0.39, 0] },
     },
     exit: {
       scaleY: 0,
       opacity: 0,
-      transition: { duration: 0.3, ease: [0.22, 1, 0.36, 1] },
+      y: 0,
+      transition: { duration: 1, ease: [0.22, 1, 0.36, 1], delay: 1 },
     },
   };
 
@@ -41,8 +44,17 @@ const Navbar = () => {
     animate: (index) => ({
       y: 0,
       opacity: 1,
-      transition: { delay: 0.05 * index },
+      transition: { delay: 0.45 * index, duration: 0.3 },
     }),
+    exit: (index) => ({
+      y: 10,
+      opacity: 0,
+      transition: { delay: 0.05 * index, duration: 0.3 },
+    }),
+  };
+
+  const handleToggle = () => {
+    setToggle((prev) => !prev);
   };
 
   return (
@@ -81,24 +93,28 @@ const Navbar = () => {
               } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
-              {nav.id === "halal-business" ? (
-                <Link to="/halal-business">{nav.title}</Link>
-              ) : (
-                <a href={`#${nav.id}`} onClick={() => setToggle(false)}>
+              {location.pathname === "/halal-business" ? (
+                <Link to={`/#${nav.id}`} onClick={() => setToggle(false)}>
                   {nav.title}
-                </a>
+                </Link>
+              ) : nav.title === `Halal Business` ? (
+                <Link to={`/halal-business`} onClick={() => setToggle(false)}>
+                  {nav.title}
+                </Link>
+              ) : (
+                <Link to={`/#${nav.id}`}>{nav.title}</Link>
               )}
             </li>
           ))}
         </ul>
 
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <div className="sm:hidden uppercase flex flex-1 justify-end items-center">
           <motion.img
             whileTap={{ scale: 0.8 }}
             src={toggle ? close : menu}
             alt="menu"
             className="w-[28px] h-[28px] object-contain cursor-pointer"
-            onClick={() => setToggle(!toggle)}
+            onClick={handleToggle}
           />
 
           <AnimatePresence>
@@ -107,16 +123,25 @@ const Navbar = () => {
                 variants={menuVariants}
                 initial="initial"
                 animate="animate"
-                exit="exit"
-                className="fixed top-[4.5rem] right-0 w-full sm:w-[300px] h-screen backdrop-blur-md bg-primary/90 p-6"
+                exit={{
+                  ...menuVariants.exit,
+                  transition: { ...menuVariants.exit.transition, delay: 0.2 },
+                }}
+                className="fixed top-[4.5rem] right-0 w-full sm:w-[300px] h-screen justify-start backdrop-blur-md bg-primary/90 p-6"
+                onAnimationComplete={() => {
+                  if (!toggle) {
+                    setToggle(false);
+                  }
+                }}
               >
-                <motion.ul className="list-none flex flex-col gap-6 items-center pt-10">
+                <motion.ul className="list-none flex flex-col gap-6 items-center justify-center pt-10">
                   {navLinks.map((nav, index) => (
                     <motion.li
                       key={nav.id}
                       variants={menuItemVariants}
                       initial="initial"
                       animate="animate"
+                      exit="exit"
                       custom={index}
                       className={`font-medium cursor-pointer text-[20px] ${
                         active === nav.title
@@ -124,17 +149,21 @@ const Navbar = () => {
                           : "text-secondary/80"
                       } hover:text-white transition-colors`}
                       onClick={() => {
-                        setToggle(false);
                         setActive(nav.title);
+                        setToggle(false);
                       }}
                     >
-                      {nav.id === "halal-business" ? (
-                        <Link to="/halal-business">{nav.title}</Link>
-                      ) : (
-                        <a href={`#${nav.id}`} onClick={() => setToggle(false)}>
-                          {nav.title}
-                        </a>
-                      )}
+                      <Link
+                        to={
+                          location.pathname === "/halal-business" ||
+                          nav.title === `Halal Business`
+                            ? `/halal-business`
+                            : `/#${nav.id}`
+                        }
+                        onClick={() => setToggle(false)}
+                      >
+                        {nav.title}
+                      </Link>
                     </motion.li>
                   ))}
                 </motion.ul>

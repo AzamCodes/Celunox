@@ -34,7 +34,7 @@ export const navLinks = [
     title: "About",
   },
   {
-    id: "halal-business",
+    id: "/halal-business",
     title: "Halal Business",
   },
   {
